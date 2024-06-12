@@ -63,18 +63,19 @@ A/B testing offers a data-driven approach to campaign optimization. It allows fo
 # Executive Summary
 
 
+
 ## Exploratory Data Analysis
-<details><summary>Expand/Collapse</summary>
-The dataset and business case is from [Kaggle](https://www.kaggle.com/datasets/faviovaz/marketing-ab-testing). The majority of the people will be exposed to ads (the experimental group). And a small portion of people (the control group) would instead see a Public Service Announcement (PSA) (or nothing) in the exact size and place the ad would normally be.
   
-and stores information for 10,000 bank customers, with each customer represented by a row and 14 features in separate columns. This totals 140,000 data points.
+The dataset and business case is from [Kaggle](https://www.kaggle.com/datasets/faviovaz/marketing-ab-testing). The majority of the people will be exposed to ads (the experimental group). And a small portion of people (the control group) would instead see a Public Service Announcement (PSA) (or nothing) in the exact size and place the ad would normally be.
 
+### Assumptions (on Success metric)
+Since no success criteria was provided, an assumption was made for the campaign's success criteria. The campaign is considered **successful** if conversion rate in ad group is at least **20% higher** than psa group.
 
-![image](https://github.com/aprilhong/bankchurn/assets/78663820/b14a1a4b-c1d3-481c-b642-8d083ed23abe)
-
+### Load Dataset
+<img src="https://github.com/aprilhong/ads_abtest/assets/78663820/2b4a4d1c-a996-4e9f-9f45-e9e4625ea2ca" width="600" >
 
 ### Descriptive Statistics
-
+The data stores information for 10,000 bank customers, with each customer represented by a row and 14 features in separate columns. This totals 140,000 data points.
 
 ### Data Cleaning
 
@@ -109,6 +110,5 @@ and stores information for 10,000 bank customers, with each customer represented
 ### Future Improvements
 
 
-</details>
 
 
