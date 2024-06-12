@@ -1,4 +1,4 @@
-# <p align="center"> :tv: Ads Marketing A/B testing :bar_chart:
+# <p align="center"> :tv: A/B testing on Ads Marketing :bar_chart:
   
 # Business Case:
 **Problem:** 
