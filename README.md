@@ -1,19 +1,22 @@
 # <p align="center"> :tv: Ads Marketing A/B testing :bar_chart:
   
 # Business Case:
-**Problem:** The marketing landscape is dynamic, and success depends on finding the most impactful messaging and creatives. Traditional methods often rely on guesswork or past experiences, leading to suboptimal campaign performance and wasted resources. 
+**Problem:** 
+
+The marketing landscape is dynamic, and success depends on finding the most impactful messaging and creatives. Traditional methods often rely on guesswork or past experiences, leading to suboptimal campaign performance and wasted resources. 
 
 The companies are interested in answering two questions:
 1. Would the campaign be successful?
 2. If the campaign was successful, how much of that success could be attributed to the ads?
 
-**Solution**
+**Solution:**
+
 A/B testing offers a data-driven approach to campaign optimization. It allows for the simultaneous testing of different campaign variations (web page elements, banners, etc.) with different audience segments. This allows us to identify which version resonates best and drives the most significant impact on key business metrics.
 
 **Methodology**:
 
 1. Exploratory Data Analysis to determine if the campaign is successful.
-2. Conduct A/B using Chi-square test of independence
+2. Conduct A/B using Chi-square Test of Independence
 3. Results
 4. Conclusion 
 
@@ -32,9 +35,9 @@ A/B testing offers a data-driven approach to campaign optimization. It allows fo
        - [Data Cleaning](#data-cleaning)
        - [Variable Analysis and Visualization](#variable-analysis-and-visualization)
     2. [AB Testing](#ab-testing)
-    3. [Results](#results)
+    3. [Results Evaluation](#results-evaluation)
     4. [Reccomendations](#recommendations)
-    5. 
+   
    
 </details>
 
@@ -244,12 +247,29 @@ Our analysis revealed that viewers who watched the advertisement (Ad group) achi
 - Ad viewership are highest around noon time (11AM-3PM), potentially coinciding with lunchtime breaks.
 - Engagement remains low throughout the overnight hours (12:00 AM to 7:00 AM) as viewers are probably asleep.
 
+## AB Testing
+The ad group generated a significant increase in conversions (43% more) compared to the PDA group. However, is the increase statistically significant or due to chance? To examine if the test group and converted categories are independent (no association) or if there's a statistically significant relationship between them, let's conduct a hypothesis test.
 
+### `Chi-Squared Test for Independence`
+is ideal because we want to assess the association between two categorical variables: being in the test group (exposed to ads) and conversion (purchased a product). 
 
-#### Recommendations
+#### 1. State the null hypothesis and the alternative hypothesis.
+- Null: There **IS NO** association between `test group` and `conversion`
+- Alternative: There **IS** association between `test group` and `conversion`
 
+#### 2. Calculate the chi-squared test statistic (𝛘2)
 
-### Future Improvements
+<img src="https://github.com/aprilhong/ads_abtest/assets/78663820/30cd9f8a-f4d1-41c2-a489-74c1c878b8cf" width="600" >
+
+<br>
+
+<img src="https://github.com/aprilhong/ads_abtest/assets/78663820/6e06fd24-87e3-462f-b50d-a62fb8a2a2f8" width="600" >
+
+## Results Evaluation
+The chi-square test statistic and its associated p-value (4.51e-11) provide strong evidence to reject the null hypothesis. This indicates a statistically significant relationship between the test group and conversion rates. In other words, the observed uplift in conversions can be attributed to the ad campaign, and not simply due to chance.
+
+## Recommendations
+
 
 
 
