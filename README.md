@@ -1,11 +1,14 @@
-# <p align="center"> :bank: Ads Marketing A/B testing :chart:
+# <p align="center"> :tv: Ads Marketing A/B testing :bar_chart:
   
-# About the dataset
-The marketing landscape is dynamic, and success depends on finding the most impactful messaging and creatives. Traditional methods often rely on guesswork or past experiences, leading to suboptimal campaign performance and wasted resources. 
+# Business Case:
+**Problem:** The marketing landscape is dynamic, and success depends on finding the most impactful messaging and creatives. Traditional methods often rely on guesswork or past experiences, leading to suboptimal campaign performance and wasted resources. 
 
 The companies are interested in answering two questions:
 1. Would the campaign be successful?
 2. If the campaign was successful, how much of that success could be attributed to the ads?
+
+**Solution**
+A/B testing offers a data-driven approach to campaign optimization. It allows for the simultaneous testing of different campaign variations (web page elements, banners, etc.) with different audience segments. This allows us to identify which version resonates best and drives the most significant impact on key business metrics.
 
 **Methodology**:
 
@@ -28,15 +31,10 @@ The companies are interested in answering two questions:
     1. [Exploratory Data Analysis](#exploratory-data-analysis)
        - [Data Cleaning](#data-cleaning)
        - [Variable Analysis and Visualization](#variable-analysis-and-visualization)
-    2. [Feature Engineering](#feature-engineering)
-    3. [Modeling](#modeling)
-       - [Evaluation Metric](#evaluation-metric)
-       - [Model 1: Decision Tree](#model-1-decision-tree)
-       - [Model 2: Random Forest](#model-2-random-forest)
-       - [Model 3: XGBoost](#model-3-xgboost)
-       - [Champion Model](#champion-model)
-    4. [Evaluation](#evaluation)
-       - [Reccomendations](#recommendations)
+    2. [AB Testing](#ab-testing)
+    3. [Results](#results)
+    4. [Reccomendations](#recommendations)
+    5. 
    
 </details>
 
@@ -44,9 +42,10 @@ The companies are interested in answering two questions:
 
 <details><summary>Expand/Collapse</summary>
   
-  - [data](https://github.com/aprilhong/bankchurn/tree/main/data) : folder containing all data files
+  - [data](https://github.com/aprilhong/ads_abtest/tree/main/data) : folder containing all data files
   - **marketing_AB.csv**: raw dataset from [Kaggle](https://www.kaggle.com/datasets/faviovaz/marketing-ab-testing)
   - [ads.ipynb](https://github.com/aprilhong/ads_abtest/blob/main/ads.ipynb) - notebook will eda and ab test analysis
+  - [plots.py](https://github.com/aprilhong/ads_abtest/blob/main/plots.py) - module for various plots
 </details>
 
 ### Technologies Used
