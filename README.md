@@ -34,8 +34,8 @@ Ads need a sweet spot for exposure. Too few and viewers miss them, too many and 
        - [Data Cleaning](#data-cleaning)
        - [Variable Analysis and Visualization](#variable-analysis-and-visualization)
     2. [AB Testing](#ab-testing)
-    3. [Results Evaluation](#results-evaluation)
-    4. [Reccomendations](#recommendations)
+    3. [Results/Conclusion](#conclusion)
+    4. [Recomendations](#recommendations)
    
    
 </details>
