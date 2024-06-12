@@ -20,10 +20,11 @@ A/B testing offers a data-driven approach to campaign optimization. It allows fo
 3. Results
 4. Conclusion 
 
-**Recommendations**: 
-
-
 **Conclusion**: 
+The exploratory data analysis reveals the ad group generated a significant increase in conversions (43% more) compared to the PSA group. Additionally, the chi-square test statistic and its associated p-value (4.51e-11) provide strong evidence to reject the null hypothesis. This indicates a statistically significant relationship between the test group and conversion rates. In other words, the observed uplift in conversions can be attributed to the ad campaign, and not simply due to chance.
+
+**Recommendations**: 
+Ads need a sweet spot for exposure. Too few and viewers miss them, too many and they get annoyed. Data suggests 64 total ads is ideal. Consider showing them less often, but at better times (like 11am-3pm) to save cost without sacrificing results.
 
 ### Table of Content
 <details><summary>Expand/Collapse</summary>
@@ -64,8 +65,6 @@ A/B testing offers a data-driven approach to campaign optimization. It allows fo
 </details>
 
 # Executive Summary
-
-
 
 ## Exploratory Data Analysis
   
@@ -153,7 +152,7 @@ most_ads_hour
 ### Variable Analysis and Visualization
 
 #### `test group`
-<img src="https://github.com/aprilhong/ads_abtest/assets/78663820/fc36e42e-1c23-41e8-a8ef-98e925417b1c" width="400" >
+<img src="https://github.com/aprilhong/ads_abtest/assets/78663820/fc36e42e-1c23-41e8-a8ef-98e925417b1c" width="400">
 
 - the 2 test groups are: ad and psa
 - 96% of viewers belong to the Ad group.
@@ -162,40 +161,8 @@ most_ads_hour
 
 **Calculate the conversion rate for each group**
 
-```python
-# save test_group values to list
-groups = df['test_group'].unique().tolist()
+<img src="https://github.com/aprilhong/ads_abtest/assets/78663820/f2e491ef-02be-4770-8937-09c88c3ecdb3" width="800" >
 
-# Calculate conversion in each test group
-def calculate_conversion_rate_difference(df, groups):
-  """
-  This function calculates the conversion rate for each group in the provided DataFrame 'df' 
-  and the difference in conversion rate between consecutive groups specified in 'groups' list.
-
-      df (pandas.DataFrame): The DataFrame containing 'test_group' and 'converted' columns.
-      groups (list): A list containing the group names for which conversion rates are to be calculated.
-
-  Returns:
-      None: The function prints the conversion rate for each group and the difference between it and the previous group's rate.
-  """
-
-  prev_percent_convert = None
-
-  for group in groups:
-    count = df[(df['test_group'] == group)].shape[0]
-    convert_count = df[(df['test_group'] == group) & (df['converted'] == True)].shape[0]
-    percent_convert = (convert_count / count) * 100
-    print(f'Conversion rate in {group} group:  {percent_convert:.2f}%')
-
-    if prev_percent_convert is not None:
-      percent_difference = ((prev_percent_convert-percent_convert)/percent_convert) *100
-      print(f'% Difference between the conversion rates: {percent_difference:.1f}%')
-
-    prev_percent_convert = percent_convert
-
-# apply function
-calculate_conversion_rate_difference(df.copy(), groups.copy())
-```
 <br>
 
 - Conversion rate in ad group:  2.55%
@@ -219,11 +186,21 @@ Our analysis revealed that viewers who watched the advertisement (Ad group) achi
 
 #### `total ads (watched)`
 
-<img src="https://github.com/aprilhong/ads_abtest/assets/78663820/e5a34ac5-da06-446d-b4c2-25a7f469c9e4" width="600" >
+<img src="https://github.com/aprilhong/ads_abtest/assets/78663820/c93f8eb6-5469-4d59-a39b-4f1398a979b9" width="600">
 
-- most viewers watch 1-5 ads in total
-- 96% of viewers watch less than 104 ads in total 
-- less than 0.01% watch over 1033 ads
+Plot for total_ads shows a log normal distribution with most viewers watching a total of 1-5 ads  
+
+<img src="https://github.com/aprilhong/ads_abtest/assets/78663820/d82cf72b-470a-40aa-aa84-da565803c8b1" width="800">
+
+The violin plot shows the distribution of the total ads watched by viewers in the each test group (ad/psa) and their conversion status (True/False)
+
+- On average, people who made a purchase (converted) after seeing ads watched more ads overall compared to those who didn't buy anything.
+    - the viewers in ad group watch an average of 64 ads while those in the psa group watch 55 ads on average.  
+- For both groups, those who did not convert watch less ads in total (11-13 ads).
+- 75% of viewers who converted in both ad and psa groups watched less than 112 ads in total.
+- Additionally, the conversion rate also gradually  decreased as viewers watch over 100 ads in total.
+
+In other words, there seems to be a sweet spot in terms of ad exposure for achieving conversions. Viewers who see too few ads might not be sufficiently informed about the product, while those who are exposed to too many ads might become overwhelmed or tune out altogether. This suggests that it's important to find the right balance between ad exposure and viewer engagement to optimize conversion rates.
 
 #### `most_ads_day`
 
@@ -265,12 +242,12 @@ is ideal because we want to assess the association between two categorical varia
 
 <img src="https://github.com/aprilhong/ads_abtest/assets/78663820/6e06fd24-87e3-462f-b50d-a62fb8a2a2f8" width="600" >
 
-## Results Evaluation
+## Conclusion
 The chi-square test statistic and its associated p-value (4.51e-11) provide strong evidence to reject the null hypothesis. This indicates a statistically significant relationship between the test group and conversion rates. In other words, the observed uplift in conversions can be attributed to the ad campaign, and not simply due to chance.
 
 ## Recommendations
 
-
+The data suggests there is an optimal range of ad exposure for achieving conversions. Seeing too few ads might leave viewers uninformed, while ad overload can lead to disengagement. Ad spending is high and the data shows viewers are most receptive around the 64-ad mark. To optimize the budget, consider reducing ad frequency and potentially achieve similar results with a lower cost. Additionally, tailoring ad frequency based on viewer behavior like airing more during 11AM - 3PM and less in the early mornings could be beneficial.
 
 
 
