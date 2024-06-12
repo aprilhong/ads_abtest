@@ -15,10 +15,8 @@ A/B testing offers a data-driven approach to campaign optimization. It allows fo
 
 **Methodology**:
 
-1. Exploratory Data Analysis to determine if the campaign is successful.
-2. Conduct A/B using Chi-square Test of Independence
-3. Results
-4. Conclusion 
+1. Exploratory Data Analysis 
+2. Conduct A/B Testing using Chi-square Test of Independence
 
 **Conclusion**: 
 The exploratory data analysis reveals the ad group generated a significant increase in conversions (43% more) compared to the PSA group. Additionally, the chi-square test statistic and its associated p-value (4.51e-11) provide strong evidence to reject the null hypothesis. This indicates a statistically significant relationship between the test group and conversion rates. In other words, the observed uplift in conversions can be attributed to the ad campaign, and not simply due to chance.
