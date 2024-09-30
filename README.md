@@ -8,18 +8,7 @@ The companies are interested in answering two questions:
 1. Would the campaign be successful?
 2. If the campaign was successful, how much of that success could be attributed to the ads?
 
-**Objective:**
-
-1. Exploratory Data Analysis 
-2. Evaluate Ad Campaign Effectivness by conducting Chi-square Test of Independence
-
-**Findings**: 
-The exploratory data analysis reveals the ad group generated a significant increase in conversions (43% more) compared to the PSA group. Additionally, the chi-square test statistic and its associated p-value (4.51e-11) provide strong evidence to reject the null hypothesis. This indicates a statistically significant relationship between the test group and conversion rates. In other words, the observed uplift in conversions can be attributed to the ad campaign, and not simply due to chance.
-
-**Recommendations**: 
-Ads need a sweet spot for exposure. Too few and viewers miss them, too many and they get annoyed. Data suggests 64 total ads is ideal. Consider showing them less often, but at better times (like 11am-3pm) to save cost without sacrificing results.
-
-# Methodology
+**Methodology**
 
   1. [Exploratory Data Analysis](#exploratory-data-analysis)
      - [Data Cleaning](#data-cleaning)
@@ -27,7 +16,12 @@ Ads need a sweet spot for exposure. Too few and viewers miss them, too many and 
   2. [Hypothesis Testing](#hypothesis-testing)
   3. [Results/Conclusion](#conclusion)
   4. [Recomendations](#recommendations)
-   
+
+**Findings**: 
+The exploratory data analysis reveals the ad group generated a significant increase in conversions (43% more) compared to the PSA group. Additionally, the chi-square test statistic and its associated p-value (4.51e-11) provide strong evidence to reject the null hypothesis. This indicates a statistically significant relationship between the test group and conversion rates. In other words, the observed uplift in conversions can be attributed to the ad campaign, and not simply due to chance.
+
+**Recommendations**: 
+Ads need a sweet spot for exposure. Too few and viewers miss them, too many and they get annoyed. Data suggests 64 total ads is ideal. Consider showing them less often, but at better times (like 11am-3pm) to save cost without sacrificing results.
 <details><summary>File Descriptions</summary>
   
   - [data](https://github.com/aprilhong/ads_abtest/tree/main/data) : folder containing all data files
