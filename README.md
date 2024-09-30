@@ -1,48 +1,34 @@
 # <p align="center"> :tv: A/B testing on Ads Marketing :bar_chart:
-  
-# Business Case:
-**Problem:** 
 
-The marketing landscape is dynamic, and success depends on finding the most impactful messaging and creatives. Traditional methods often rely on guesswork or past experiences, leading to suboptimal campaign performance and wasted resources. 
+# Overview
+A/B testing offers a data-driven approach to campaign optimization. It allows for the simultaneous testing of different campaign variations (web page elements, banners, etc.) with different audience segments. This allows us to identify which version resonates best and drives the most significant impact on key business metrics. This dataset from Kaggle() is the result of an A/B test where a majority of users were shown ads while a smaller group saw a Public Service Announcement (PSA).
 
 The companies are interested in answering two questions:
+
 1. Would the campaign be successful?
 2. If the campaign was successful, how much of that success could be attributed to the ads?
 
-**Solution:**
-
-A/B testing offers a data-driven approach to campaign optimization. It allows for the simultaneous testing of different campaign variations (web page elements, banners, etc.) with different audience segments. This allows us to identify which version resonates best and drives the most significant impact on key business metrics.
-
-**Methodology**:
+**Objective:**
 
 1. Exploratory Data Analysis 
-2. Evaluate Ad Campaign effectivness by conducting Chi-square Test of Independence
+2. Evaluate Ad Campaign Effectivness by conducting Chi-square Test of Independence
 
-**Conclusion**: 
+**Findings**: 
 The exploratory data analysis reveals the ad group generated a significant increase in conversions (43% more) compared to the PSA group. Additionally, the chi-square test statistic and its associated p-value (4.51e-11) provide strong evidence to reject the null hypothesis. This indicates a statistically significant relationship between the test group and conversion rates. In other words, the observed uplift in conversions can be attributed to the ad campaign, and not simply due to chance.
 
 **Recommendations**: 
 Ads need a sweet spot for exposure. Too few and viewers miss them, too many and they get annoyed. Data suggests 64 total ads is ideal. Consider showing them less often, but at better times (like 11am-3pm) to save cost without sacrificing results.
 
-### Table of Content
-<details><summary>Expand/Collapse</summary>
+# Methodology
 
-1. [File Descriptions](#file-descriptions)
-2. [Technologies Used](#technologies-used)
-3. [Executive Summary](#executive-summary)
-    1. [Exploratory Data Analysis](#exploratory-data-analysis)
-       - [Data Cleaning](#data-cleaning)
-       - [Variable Analysis and Visualization](#variable-analysis-and-visualization)
-    2. [AB Testing](#ab-testing)
-    3. [Results/Conclusion](#conclusion)
-    4. [Recomendations](#recommendations)
+  1. [Exploratory Data Analysis](#exploratory-data-analysis)
+     - [Data Cleaning](#data-cleaning)
+     - [Variable Analysis and Visualization](#variable-analysis-and-visualization)
+  2. [Hypothesis Testing](#hypothesis-testing)
+  3. [Results/Conclusion](#conclusion)
+  4. [Recomendations](#recommendations)
    
-   
-</details>
-
-### File Descriptions
-
-<details><summary>Expand/Collapse</summary>
+<details><summary>File Descriptions</summary>
   
   - [data](https://github.com/aprilhong/ads_abtest/tree/main/data) : folder containing all data files
   - **marketing_AB.csv**: raw dataset from [Kaggle](https://www.kaggle.com/datasets/faviovaz/marketing-ab-testing)
@@ -50,19 +36,6 @@ Ads need a sweet spot for exposure. Too few and viewers miss them, too many and 
   - [plots.py](https://github.com/aprilhong/ads_abtest/blob/main/plots.py) - module for various plots
 </details>
 
-### Technologies Used
-
-<details> <Summary>Expand/Collapse</summary>
-  
-- Python
-- Pandas
-- Numpy
-- Matplotlib
-- Seaborn
-- Scikit-Learn
-</details>
-
-# Executive Summary
 
 ## Exploratory Data Analysis
   
@@ -222,7 +195,7 @@ In other words, there seems to be a sweet spot in terms of ad exposure for achie
 - Ad viewership are highest around noon time (11AM-3PM), potentially coinciding with lunchtime breaks.
 - Engagement remains low throughout the overnight hours (12:00 AM to 7:00 AM) as viewers are probably asleep.
 
-## AB Testing
+## Hypothesis Testing
 The ad group generated a significant increase in conversions (43% more) compared to the PDA group. However, is the increase statistically significant or due to chance? To examine if the test group and converted categories are independent (no association) or if there's a statistically significant relationship between them, let's conduct a hypothesis test.
 
 ### `Chi-Squared Test for Independence`
