@@ -1,4 +1,4 @@
-# <p align="center"> :tv: A/B testing on Ads Marketing :bar_chart:
+# <p align="center"> :tv: Evaluating A/B Test Effectiveness in Ads Marketing :bar_chart:
 
 # Overview
 A/B testing offers a data-driven approach to campaign optimization. It allows for the simultaneous testing of different campaign variations (web page elements, banners, etc.) with different audience segments. This allows us to identify which version resonates best and drives the most significant impact on key business metrics. This dataset from Kaggle() is the result of an A/B test where a majority of users were shown ads while a smaller group saw a Public Service Announcement (PSA).
